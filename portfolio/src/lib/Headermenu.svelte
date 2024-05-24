@@ -1,31 +1,37 @@
 <script>
     
 </script>
-    <div>
-    <h1>Greatest Projects</h1>
-    <div class="difum"></div>
+    <div class="difum">
+    <button>Greatest Projects</button>
+    <button>about</button>
+    <button>Projects</button>
     </div>
 
 <style>
 
-    h1{
-        color: black;
-        font-family: sans-serif;
-        text-align: center;
-        width: 100vw;
-        height: 4vh;
-        font-size: 6vh;
-        margin-top: 0%;
-        
-    }
+    
     .difum{
         background: linear-gradient(
             0deg,
-                #F5F5F5 0%,
-                rgba(231, 229, 229, 1) 60%
+                black 0%,
+                #0000 15%
             );
-    height: 2vh;
+    height: 10vh;
     }
+
+    button{
+        background-color: #0C1821;
+        /* border: px; */
+        font-size: 6vh;
+        border: 0px;
+        color: #CCC9DC;   
+    }
+
+    button:hover{
+        color: white;
+        background-color: #000000;
+    }
+    
 
 </style>
   

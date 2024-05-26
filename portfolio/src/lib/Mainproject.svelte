@@ -22,11 +22,12 @@
 <style>
 
     .project01{
-        color: #CCC9DC;
         width: 70vw;
         height: 30vh;
         display: flex;
         justify-content: center;
+        margin-left: 16%;   
+        margin-top: 10%;
     }
 
     p{
@@ -34,8 +35,22 @@
         text-align: justify;
         font-family: sans-serif;
         font-size: 4vh;
-    
+        color: #ccc9dc4d;
+        animation-name: example;
+        animation-duration: 20s;
+        position: relative;
     }
+
+    @keyframes example {
+        
+        0%   {color:black; bottom: 0px;}
+        25%  {color:#0C1821; bottom: 10px;}
+        50%  {color:#1B2A41; top: 10px;}
+        75%  {color:#CCC9DC; top: 10px;}
+        100% {color:#324A5F ;bottom: 10px }
+    }
+
+
 
 
 </style>

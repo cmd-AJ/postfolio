@@ -1,21 +1,19 @@
 <script>
   import Headermenu from './lib/Headermenu.svelte';
-  import Counter from './lib/Counter.svelte'
+  import Loading from './lib/Loading.svelte';
   import Mainproject from './lib/Mainproject.svelte';
 </script>
 
-<header><Headermenu></Headermenu></header>
+<header></header>
 
 <main>
   <div >
-    <Mainproject></Mainproject>
-
+    <Loading></Loading>
   </div>
 </main>
 
 <footer>
-  <button style=" background-image: url('https://i.pinimg.com/736x/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.jpg')  " ></button>
-  <button style=" background-image: url('https://static1.srcdn.com/wordpress/wp-content/uploads/2021/12/Gmail-Dark-Mode.jpg')" ></button>
+<button></button>
 </footer>
 
 
@@ -34,7 +32,9 @@
   }
 
   footer{
-    margin-top: 51vh;
+    width: 100%;
+    height: 8vh;
+    margin-top: 100%;
     display: flex;
     flex-direction: row;
     background-color: #0C1821 ;
@@ -49,8 +49,5 @@
         border: 0px;
         margin-bottom: 1vh;
     }
-
-
-
 
 </style>

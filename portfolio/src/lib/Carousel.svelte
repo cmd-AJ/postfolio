@@ -2,24 +2,24 @@
 	import Carousel from "svelte-carousel";
 	const images = [
 	  {
-		url: "https://w.wallhaven.cc/full/3l/wallhaven-3l8vzv.jpg",
-		description: "image1",
+		url: '../../carblogs.mp4',
+		description: "../../react.svg",
 	  },
 	  {
-		url: "https://res.cloudinary.com/beswift/image/upload/v1650391337/photo-1647067867267-e01d98462f3c_ugtnwe.jpg",
-		description: "image2",
+		url: "../../chat.mp4",
+		description: "../../javascript.svg",
 	  },
 	  {
-		url: "https://res.cloudinary.com/beswift/image/upload/v1650391131/photo-1648800475313-2bb7fbec8701_ae60yw.jpg",
-		description: "image3",
+		url: "../../Ionic.mp4",
+		description: "../../ionic.svg",
 	  },
 	  {
-		url: "https://res.cloudinary.com/beswift/image/upload/v1650390102/photo-1649894222226-056a1a79d9fb_xlv73h.jpg",
-		description: "image4",
+		url: "../../html.mp4",
+		description: "../../html5.svg",
 	  },
 	  {
-		url: "https://res.cloudinary.com/beswift/image/upload/v1650389425/photo-1649894221695-45abb718a190_sgjhwd.jpg",
-		description: "image5",
+		url: "../../goku.mp4",
+		description: "../../css3.svg",
 	  },
 	];
 	let carousel; // for calling methods of the carousel instance
@@ -33,19 +33,53 @@
 	  bind:this={carousel}
 	  let:loaded
 	  autoplay
-	  autoplayDuration={4000}
+	  autoplayDuration={15000}
 	  autoplayProgressVisible
 	  
 	  
   >
   
-
 	  {#each images as src, imageIndex (src)}
 		<div class="img-container">
 		  {#if loaded.includes(imageIndex)}
-			<img src={src.url} alt={src.description} width={'100%'} height={600} />
+			<!-- <img src={src.url} alt={src.description} width={'100%'} height={600} /> -->
+			<div class="imagenylogo">
+			<video
+				width={'100%'} height={600}
+				src={src.url}
+				autoplay
+				loop
+			>
+				<track kind="captions" />
+			</video>
+		</div>
 		  {/if}
 		</div>
 	  {/each}
   </Carousel>
 
+
+<style> 
+
+	.imagenylogo{
+		/* display: flex; */
+	}
+	
+
+	@keyframes grandepeq {
+        0%   { transform: scale(1);}
+        50% { transform: scale(1.05); }
+        100%   { transform: scale(1);}
+
+        
+    }
+
+	img{
+		animation: grandepeq 5s infinite;
+		position: absolute;
+		margin-left: 70vw;
+		margin-top: 53vh;
+		
+	}
+
+</style>

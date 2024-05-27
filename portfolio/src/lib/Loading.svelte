@@ -21,12 +21,12 @@
     <div class="project01"  style="background-image: url({screens[2]});" >
     </div>
     <div class="text1">
-        <p><strong style="font-size: 3vh;">Andre Jo</strong>  ,passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
+        <p><strong style="font-size: 3vh;">Andre Jo</strong>, passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
         <button id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
         <div class="foto" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxHUOYmNClfAMmDMFEfn7IyQfFwPVxJVu1n3wVXmatA&s');"></div>
     </div>
-    <div id=tecno class="tecnologias"></div>
-    <div>
+    <div id=tecno class="tecnologias"><h1 style=" font-size:6vh; text-align: center;">Proyectos</h1></div>
+    <div class="tec" >
         <Carousel></Carousel>
     </div>
 
@@ -40,10 +40,29 @@
     }
 
     .tec{
-        margin-bottom: 40%;
-        width: 20vw;
-        height: 20vh;
-        background-color: rgb(214, 121, 0);
+            
+        --s: 48px; /* control the size*/
+        --c1: #000000;
+        --c2: #ccc9dc;
+        --c3: #324a5f;
+        
+        --b: calc(var(--s)/2.67); /* control the thickness of the wavy line */
+        
+        --_r: calc(1.28*var(--s) + var(--b)/2) at left 50%;
+        --_f: calc(100% - var(--b)),var(--c1) calc(101% - var(--b)) 100%,#0000 101%;
+        --g0: calc(-.8*var(--s)),var(--c2) var(--_f);
+        --g1: calc(-.8*var(--s)),var(--c3) var(--_f);
+        --_s: calc(1.5*var(--s) + var(--b));
+        background: 
+            radial-gradient(var(--_r) bottom var(--g0)) calc(2*var(--s)) calc(-1*var(--_s)),
+            radial-gradient(var(--_r) bottom var(--g1)) calc(-1*var(--s)) calc(var(--_s)/-2),
+            radial-gradient(var(--_r) top    var(--g1)) 0 var(--_s),
+            radial-gradient(var(--_r) top    var(--g0)) var(--s) calc(var(--_s)/ 2),
+            linear-gradient(var(--c2) 50%,var(--c3) 0);
+        background-size: calc(4*var(--s)) var(--_s);
+        padding-top: 2%;
+        
+        
     }
 
     .tecnologias{
@@ -52,8 +71,7 @@
         height: 14vh;
         
         background-color: #000000;
-
-
+        color: #CCC9DC;
     }
 
     .foto{

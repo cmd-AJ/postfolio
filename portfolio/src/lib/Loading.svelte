@@ -1,21 +1,59 @@
 <script>
+    import Carousel from './Carousel.svelte'
+    const buttonright = '<'
 
     const screens = [ 'https://w.wallhaven.cc/full/3l/wallhaven-3l8vzv.jpg', 'https://w.wallhaven.cc/full/ne/wallhaven-new1ew.jpg', 'https://w.wallhaven.cc/full/ox/wallhaven-oxelvp.jpg'  ]
     
 
+
+    function handleclick({ target }) {
+		const el = document.querySelector(target.getAttribute('href'));
+		if (!el) return;
+    el.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+
 </script>
 
 
-    <div class="project01"  style="background-image: url({screens[0]});" >
+    <div class="project01"  style="background-image: url({screens[2]});" >
     </div>
     <div class="text1">
         <p>I'm Andre Jo, a passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. Let's connect, collaborate, and code the future together.</p>
-        <button>Get Started</button>
+        <button id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
         <div class="foto" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxHUOYmNClfAMmDMFEfn7IyQfFwPVxJVu1n3wVXmatA&s');"></div>
     </div>
-    
+    <div id=tecno class="tecnologias"></div>
+    <div>
+        <Carousel></Carousel>
+    </div>
 
 <style>
+    
+    .prueba{
+        width: 20vw;
+        height: 40vh;
+        background-color: antiquewhite;
+
+    }
+
+    .tec{
+        margin-bottom: 40%;
+        width: 20vw;
+        height: 20vh;
+        background-color: rgb(214, 121, 0);
+    }
+
+    .tecnologias{
+        width: 90vw;
+        margin-top: 20%;
+        height: 2vh;
+        
+        background-color: #000000;
+
+    }
 
     .foto{
         width: 20vw;
@@ -38,23 +76,10 @@
         background-size: cover;
         rotate: -1deg;
         animation-name: grandepeq;
-        animation-duration: 10s;
+        animation-duration: 20s;
         position: relative;
-        transform-style: preserve-3d;
         border-radius: 0px;
         
-    }
-
-    .project01::before {
-    content: "";
-    position: absolute; 
-    inset: 0px;
-    background: conic-gradient(from 90deg at 40% -25%, #1B2A41, #1B2A41, #1B2A41, #1B2A41, #324A5F, #324A5F, #CCC9DC, #CCC9DC, #CCC9DC, #CCC9DC, #CCC9DC, #CCC9DC, #CCC9DC, #CCC9DC, #CCC9DC, #CCC9DC);
-    filter: blur(10px);
-    transform: translate3d(25px,27px,-1px);
-    border-radius: inherit;
-    pointer-events: none;
-    rotate: 1deg;
     }
 
     button{
@@ -67,6 +92,7 @@
         align-items: center;
         justify-content: center;
         font-size: 1.2vmax;
+        
 
     }
     
@@ -97,12 +123,13 @@
     }
 
     @keyframes grandepeq {
-        0%   { height: 80vh; width: 90vw;}
-        50% {height: 70vh; width: 88vw; }
-        100%   {height: 80vh; width: 90vw;}
+        0%   { transform: scale(1);}
+        50% { transform: scale(1.05); }
+        100%   { transform: scale(1);}
 
         
     }
+    
 
     @keyframes example {
         
@@ -120,7 +147,6 @@
 
         
     }
-
 
 
 

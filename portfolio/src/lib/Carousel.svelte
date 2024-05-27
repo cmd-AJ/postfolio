@@ -29,12 +29,17 @@
   </script>
   
   <Carousel
+  
 	  bind:this={carousel}
 	  let:loaded
 	  autoplay
 	  autoplayDuration={4000}
 	  autoplayProgressVisible
+	  
+	  
   >
+  
+
 	  {#each images as src, imageIndex (src)}
 		<div class="img-container">
 		  {#if loaded.includes(imageIndex)}
@@ -43,3 +48,4 @@
 		</div>
 	  {/each}
   </Carousel>
+

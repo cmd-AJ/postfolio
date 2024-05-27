@@ -21,7 +21,7 @@
     <div class="project01"  style="background-image: url({screens[2]});" >
     </div>
     <div class="text1">
-        <p>I'm Andre Jo, a passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. Let's connect, collaborate, and code the future together.</p>
+        <p><strong style="font-size: 3vh;">Andre Jo</strong>  ,passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
         <button id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
         <div class="foto" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxHUOYmNClfAMmDMFEfn7IyQfFwPVxJVu1n3wVXmatA&s');"></div>
     </div>
@@ -47,11 +47,12 @@
     }
 
     .tecnologias{
-        width: 90vw;
-        margin-top: 20%;
-        height: 2vh;
+        width: 100vw;
+        margin-top: 10%;
+        height: 14vh;
         
         background-color: #000000;
+
 
     }
 
@@ -125,6 +126,14 @@
     @keyframes grandepeq {
         0%   { transform: scale(1);}
         50% { transform: scale(1.05); }
+        100%   { transform: scale(1);}
+
+        
+    }
+
+    @keyframes coolwaves {
+        0%   { transform: scale(1);}
+        50% { transform: scale(0.5); }
         100%   { transform: scale(1);}
 
         

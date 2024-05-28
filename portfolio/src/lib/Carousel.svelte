@@ -61,10 +61,6 @@
 
 <style> 
 
-	.imagenylogo{
-		/* display: flex; */
-	}
-	
 
 	@keyframes grandepeq {
         0%   { transform: scale(1);}
@@ -74,12 +70,5 @@
         
     }
 
-	img{
-		animation: grandepeq 5s infinite;
-		position: absolute;
-		margin-left: 70vw;
-		margin-top: 53vh;
-		
-	}
 
 </style>

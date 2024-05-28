@@ -1,10 +1,23 @@
 <script>
     import Carousel from './Carousel.svelte'
-    const buttonright = '<'
-
+    import Console from './Console.svelte';
+    let showModal = false
     const screens = [ 'https://w.wallhaven.cc/full/3l/wallhaven-3l8vzv.jpg', 'https://w.wallhaven.cc/full/ne/wallhaven-new1ew.jpg', 'https://w.wallhaven.cc/full/ox/wallhaven-oxelvp.jpg'  ]
-    
+    $: nombre = '/Invitados: ~$'
+    $: comando = ''
+    $: flicker = '\u2588'
 
+    setInterval( flick, 2001)
+    setInterval( flicked, 1000)
+
+        function flick() {
+            flicker = '\u0020'
+    }
+
+    function flicked() {
+            flicker =  '\u2588'
+    }
+    
 
     function handleclick({ target }) {
 		const el = document.querySelector(target.getAttribute('href'));
@@ -22,7 +35,7 @@
     </div>
     <div class="text1">
         <p><strong style="font-size: 3vh;">Andre Jo</strong>, passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
-        <button id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
+        <button class="buttons" id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
         <div class="foto" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxHUOYmNClfAMmDMFEfn7IyQfFwPVxJVu1n3wVXmatA&s');"></div>
     </div>
     <div id=tecno class="tecnologias"><h1 style=" font-size:6vh; text-align: center;">Proyectos</h1></div>
@@ -30,12 +43,40 @@
         <Carousel></Carousel>
     </div>
 
+    <div class="console">
+        <button >Help with console?</button>
+        {nombre}
+        <span style="min-width: 30px; margin-right: 6px;" class="input" role="textbox" contenteditable>{comando}</span>
+        {flicker}
+
+        <!-- <Console bind:showModal ></Console> -->
+    </div>
+
 <style>
     
     .prueba{
-        width: 20vw;
+        width: 100vw;
         height: 40vh;
         background-color: antiquewhite;
+
+    }
+    
+
+    .console{
+        margin-top: 5%;
+        width: 50vw;
+        height: 40vh;
+        background-color: rgb(160, 160, 160);
+        display: flex;
+        flex-direction: row;
+    }
+
+    .comandline{
+        min-width: 1px;
+        width: 1px;
+        height: 5vh;
+        background-color: rgb(0, 0, 0);
+        resize: none;
 
     }
 
@@ -101,7 +142,7 @@
         
     }
 
-    button{
+    .buttons{
         background-color: #CCC9DC;
         border-radius: 20px;
         display: flex;
@@ -115,7 +156,7 @@
 
     }
     
-    button:hover{
+    .buttons:hover{
         background-color: #0C1821;
         color: #CCC9DC;
         animation: borders 10s infinite;

@@ -1,9 +1,10 @@
 <script>
     import Carousel from './Carousel.svelte'
-    import Console from './Console.svelte';
+    import Modal from './Modal.svelte';
+    import Consolemenu from './Consolemenu.svelte';
     let showModal = false
     const screens = [ 'https://w.wallhaven.cc/full/3l/wallhaven-3l8vzv.jpg', 'https://w.wallhaven.cc/full/ne/wallhaven-new1ew.jpg', 'https://w.wallhaven.cc/full/ox/wallhaven-oxelvp.jpg'  ]
-    $: nombre = '/Invitados: ~$'
+    $: nombre = '/Invitados: ~$ '
     $: comando = ''
     $: flicker = '\u2588'
 
@@ -17,6 +18,18 @@
     function flicked() {
             flicker =  '\u2588'
     }
+
+    function keypress(event){
+        if( event.key == 'Enter'){
+            event.preventDefault()
+            console.log( "Le dio enter" )
+            const dato = document.getElementById('spans')
+            comando = '/Invitados: ~$ ' + dato.innerText
+            dato.innerText = ''
+        }
+    }
+
+    
     
 
     function handleclick({ target }) {
@@ -43,42 +56,78 @@
         <Carousel></Carousel>
     </div>
 
-    <div class="console">
-        <button >Help with console?</button>
-        {nombre}
-        <span style="min-width: 30px; margin-right: 6px;" class="input" role="textbox" contenteditable>{comando}</span>
-        {flicker}
+    <button on:click={() => (showModal = true)} class="tooltip" ><u>Help with console? </u></button>
 
+    
+
+    <Modal bind:showModal>
+        <h2 slot="header">
+            Terminal use!
+        </h2>
+
+        <p>To use this terminal to search for my technologies, projects, or works I've done, we will start with the simple commands.</p>
+
+        <p>Command: <strong>ls</strong>   -- Shows mostly all my folder directory</p>
+        <p>Command: <strong>cd</strong>   -- To enter into a directory</p>
+
+        <p> <i> Note:</i> this a simple terminal with only these two commands.</p>
+    
+
+    </Modal>
+
+    <div class="console">
+        {nombre}
+        <span  on:keydown={keypress} tabindex="0" style="min-width: 30px; margin-right: 6px; white-space: nowrap; height:20px" class="input" role="textbox" id="spans" contenteditable></span>
+        {flicker}
         <!-- <Console bind:showModal ></Console> -->
     </div>
 
+    <div class="consolemenu"><Consolemenu answer={comando}></Consolemenu></div>
+
 <style>
     
-    .prueba{
-        width: 100vw;
+    .consolemenu{
+        width: 90vw;
         height: 40vh;
-        background-color: antiquewhite;
+        background-color: #0C1821;
+        margin-top: 20% ;
+        color: #CCC9DC;
+        margin-right: 4%;
+        margin-left: 4%;
+        border: 2px solid #CCC9DC;
+        border-radius: 20px;
+        padding: 2%;
 
+
+    }
+
+    .input{
+        color: #CCC9DC;
+        outline: none;
+        border: 0px;
+
+    }
+
+    .input::placeholder{
+        color:#CCC9DC
     }
     
 
     .console{
         margin-top: 5%;
-        width: 50vw;
-        height: 40vh;
-        background-color: rgb(160, 160, 160);
+        margin-left: 2%;
+        width: 68vw;
+        height: 4vh;
+        background-color: rgb(0, 0, 0);
         display: flex;
         flex-direction: row;
+        color: #CCC9DC;
+        border-top: 5px solid white;
+        border-right: 5px solid white;
+        padding-top: 1%;
     }
 
-    .comandline{
-        min-width: 1px;
-        width: 1px;
-        height: 5vh;
-        background-color: rgb(0, 0, 0);
-        resize: none;
-
-    }
+    
 
     .tec{
             
@@ -104,6 +153,45 @@
         padding-top: 2%;
         
         
+    }
+
+        /* HTML: <div class="tooltip">This is a Speech Bubble with a gradient coloration and with border radius </div> */
+    .tooltip {
+    color: #CCC9DC;
+    font-size: 18px;
+    max-width: 28ch;
+    text-align: center;
+    position: relative;
+    left: 75vw;
+    top: 20vh;
+    border: 0px;
+    }
+    .tooltip {
+    /* triangle dimension */
+    --b: 2em; /* base */
+    --h: 1em; /* height */
+
+    --p: 0%; /* triangle position (0%:top 100%:bottom) */
+    --r: 1.2em; /* the radius */
+
+    padding: 1em;
+    border-radius: var(--r)/min(var(--r),var(--p) - var(--b)/2) var(--r) var(--r) min(var(--r),100% - var(--p) - var(--b)/2);
+    background: 100%/calc(100% + var(--h)) 100% 
+        linear-gradient(-45deg,#1B2A41,#324A5F); /* the gradient */
+    position: relative;
+    z-index: 0;
+    }
+    .tooltip:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 0 0 calc(-1*var(--h));
+    background-image: inherit;
+    clip-path: polygon(var(--h) max(0%,var(--p) - var(--b)/2),0 var(--p),var(--h) min(100%,var(--p) + var(--b)/2),50% 50%);
+    }
+
+    .tooltip:hover {
+    transform: scale(1.2);
     }
 
     .tecnologias{

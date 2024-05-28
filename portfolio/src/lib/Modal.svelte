@@ -13,13 +13,13 @@
 	on:click|self={() => dialog.close()}
 >
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<div on:click|stopPropagation>
+	<div on:click|stopPropagation style="background-color: #324a5f ; color:#ccc9dc">
 		<slot name="header" />
 		<hr />
 		<slot />
 		<hr />
 		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={() => dialog.close()}>close modal</button>
+		<button autofocus on:click={() => dialog.close()}>Close</button>
 	</div>
 </dialog>
 
@@ -60,5 +60,19 @@
 	}
 	button {
 		display: block;
+        box-shadow: 0px 10px 14px -7px #276873;
+        background:linear-gradient(to bottom, #1B2A41 5%, #0C1821 100%);
+        background-color:#599bb3;
+        border-radius:8px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:20px;
+        font-weight:bold;
+        padding: 4px 20px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #3d768a;
+
 	}
 </style>

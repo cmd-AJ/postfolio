@@ -13,7 +13,6 @@
 </main>
 
 <footer>
-<button></button>
 </footer>
 
 
@@ -34,20 +33,12 @@
   footer{
     width: 100%;
     height: 8vh;
-    margin-top: 100%;
+    margin-top: 3%;
     display: flex;
     flex-direction: row;
-    background-color: #0C1821 ;
+    background-color: #CCC9DC ;
   }
 
-  button{
-        display: flex;
-        width: vw;
-        height: 8vh;
-        background-size:cover;
-        background-repeat: no-repeat;
-        border: 0px;
-        margin-bottom: 1vh;
-    }
+
 
 </style>

@@ -49,7 +49,7 @@
     <div class="text1">
         <p><strong style="font-size: 3vh;">Andre Jo</strong>, passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
         <button class="buttons" id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
-        <div class="foto" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQxHUOYmNClfAMmDMFEfn7IyQfFwPVxJVu1n3wVXmatA&s');"></div>
+        <div class="foto" style="background-image: url('/yo.png');"></div>
     </div>
     <div id=tecno class="tecnologias"><h1 style=" font-size:6vh; text-align: center;">Proyectos</h1></div>
     <div class="tec" >
@@ -84,16 +84,50 @@
 
     <div class="consolemenu"><Consolemenu answer={comando}></Consolemenu></div>
 
+
+    <footer>
+        <div class="footer">
+          <button on:click={() => window.location.href = 'https://www.linkedin.com/in/andre-jo-6a6b2422b/'}  style="margin-left: 1vw;" class="butto"><img class="" src="./linkedin.svg" alt="d"></button>
+          <button on:click={() => window.location.href = 'https://github.com/cmd-AJ'} class="butto"> <img src="./github.svg" alt="d"></button>
+        </div>
+    </footer>
+
 <style>
+
+.footer{
+    display: flex;
+  }
+
+.butto{
+    background-color: #0C1821;
+    border: 0px;
+  }
+  .butto:hover{
+    background-color: #324A5F;
+    border: 0px;
+  }
+
+  footer{
+    width: 100%;
+    height: 8vh;
+    margin-top: 6%;
+    display: flex;
+    flex-direction: row;
+    background-color: #0C1821 ;
+  }
+
+  img{
+    width: 46px;
+  }
     
     .consolemenu{
         width: 90vw;
         height: 40vh;
         background-color: #0C1821;
-        margin-top: 20% ;
+        margin-top: 9% ;
         color: #CCC9DC;
         margin-right: 4%;
-        margin-left: 4%;
+        margin-left: 3%;
         border: 2px solid #CCC9DC;
         border-radius: 20px;
         padding: 2%;
@@ -158,8 +192,8 @@
         /* HTML: <div class="tooltip">This is a Speech Bubble with a gradient coloration and with border radius </div> */
     .tooltip {
     color: #CCC9DC;
-    font-size: 18px;
-    max-width: 28ch;
+    font-size: 2vh;
+    max-width: 23vw;
     text-align: center;
     position: relative;
     left: 75vw;
@@ -204,13 +238,17 @@
     }
 
     .foto{
-        width: 20vw;
-        height: 40vh;
+        max-width: 19vw;
+        height: 72vh;
         position: relative;
-        right: 40%;
-        bottom: 10%;
+        right: 25vw;
+        bottom: 44vh;
+        animation: grandepeqs 20s;
+        padding: 2%;
         background-size: cover;
     }
+
+
 
     .project01{
         width: 90vw;
@@ -230,8 +268,13 @@
         
     }
 
+    a{
+        color: #CCC9DC;
+    }
+
     .buttons{
-        background-color: #CCC9DC;
+        background-color: #ccc9dc00;
+        color: #CCC9DC;
         border-radius: 20px;
         display: flex;
         margin-left: 80%;
@@ -257,7 +300,7 @@
         margin-left: 30%;
         background-color: rgba(0, 0, 0, 0.747);
         color: white;
-        padding: 2%;
+        padding: 2vw;
         font-size: 1.2vmax;
         text-align: justify;
         font-family: sans-serif;
@@ -277,6 +320,13 @@
 
         
     }
+
+    @keyframes grandepeqs {
+    0%   { transform: scale(1) translate(0, 0); }
+    50%  { transform: scale(1.05) translate(10px, -10px); }
+    100% { transform: scale(1) translate(0, 0); }
+}
+
 
     @keyframes coolwaves {
         0%   { transform: scale(1);}

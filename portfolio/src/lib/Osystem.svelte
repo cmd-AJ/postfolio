@@ -1,20 +1,17 @@
 <script>
 
     const tecnologias = [
-        { id:"React", imagen:"/react.svg" },
-        { id:"Svelte", imagen:"/svelte.svg" },
-        { id:"Ioinic", imagen:"/ionic.svg" },
-        { id:"javascript", imagen:"/javascript.svg" },
-        { id:"html", imagen:"/html5.svg" },
-        { id:"css", imagen:"/css3.svg" },
-
+        { id:"github", imagen:"/github.svg" },
+        { id:"postgresql", imagen:"/oistgresql.svg" },
+        { id:"docker", imagen:"/docker.svg" },
+        { id:"aws", imagen:"/aws.svg" }
     ]
 
 </script>
 
 <div style="display: flex;">
 
-    <div><img class="react"  src={tecnologias[0].imagen} alt="">
+    <div><img class="svelte"  src={tecnologias[0].imagen} alt="">
     </div>
 
     <div><img class="svelte" src={tecnologias[1].imagen} alt="">
@@ -24,8 +21,7 @@
     </div>
 
     <div style="display: flex;">
-        <img class="htmls" style="height: 18vh;" src={tecnologias[4].imagen} alt="">
-        <img class="css3" style="height: 18vh;" src={tecnologias[5].imagen} alt="">
+        <img class="htmls" style="height: 18vh;" src={tecnologias[3].imagen} alt="">
     </div>
 
 
@@ -41,33 +37,19 @@
         right: 0%;
         top: 20%;
         animation: ziims 10s infinite;
-    }
-
-    .css3{
-        position: relative; 
-        right: 25%;
-        top: 20%;
-        animation: ziims 10s infinite;
+        margin-left: 20%;
     }
 
     img{
         width: 20vw;
         height: 25vh;
     }
-    
-
-    .react{
-        animation: rotation 20s infinite;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-    }
     .ionic{
-        animation: rotation 20s infinite;
+        animation: ziim 20s infinite;
         display: flex;
         justify-content: center;
         margin-top: 15%;
+        margin-left: 20%;
 
     }
     .svelte{
@@ -75,6 +57,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-left: 20%;
 
     }
     

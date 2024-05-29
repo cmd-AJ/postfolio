@@ -49,7 +49,7 @@
     <div class="text1">
         <p><strong style="font-size: 3vh;">Andre Jo</strong>, passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
         <button class="buttons" id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
-        <div class="foto" style="background-image: url('./yo.png');"></div>
+        <img src="./yo.png" alt="s" class="foto">
     </div>
     <div id=tecno class="tecnologias"><h1 style=" font-size:6vh; text-align: center;">Proyectos</h1></div>
     <div class="tec" >
@@ -240,14 +240,13 @@
     }
 
     .foto{
-        max-width: 19vw;
-        height: 72vh;
+        width: 20vw;
+        height: 60vh;
         position: relative;
-        right: 25vw;
-        bottom: 44vh;
         animation: grandepeqs 20s;
-        padding: 2%;
         background-size: cover;
+        bottom: 28vh;
+        right: 20vw;
     }
 
 

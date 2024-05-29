@@ -49,7 +49,7 @@
     <div class="text1">
         <p><strong style="font-size: 3vh;">Andre Jo</strong>, passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
         <button class="buttons" id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
-        <div class="foto" style="background-image: url('../src/assets/yo.png');"></div>
+        <div class="foto" style="background-image: url('./yo.png');"></div>
     </div>
     <div id=tecno class="tecnologias"><h1 style=" font-size:6vh; text-align: center;">Proyectos</h1></div>
     <div class="tec" >
@@ -87,8 +87,8 @@
 
     <footer>
         <div class="footer">
-          <button on:click={() => window.location.href = 'https://www.linkedin.com/in/andre-jo-6a6b2422b/'}  style="margin-left: 1vw;" class="butto"><img class="" src="../src/assets/linkedin.svg" alt="d"></button>
-          <button on:click={() => window.location.href = 'https://github.com/cmd-AJ'} class="butto"> <img src="/../src/assets/github.svg" alt="d"></button>
+          <button on:click={() => window.location.href = 'https://www.linkedin.com/in/andre-jo-6a6b2422b/'}  style="margin-left: 1vw;" class="butto"><img class="" src="./linkedin.svg" alt="d"></button>
+          <button on:click={() => window.location.href = 'https://github.com/cmd-AJ'} class="butto"> <img src="./github.svg" alt="d"></button>
         </div>
     </footer>
 

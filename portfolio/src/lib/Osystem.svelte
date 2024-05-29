@@ -1,10 +1,10 @@
 <script>
 
     const tecnologias = [
-        { id:"github", imagen:"../src/assets/github.svg" },
-        { id:"postgresql", imagen:"../src/assets//oistgresql.svg" },
-        { id:"docker", imagen:"../src/assets/docker.svg" },
-        { id:"aws", imagen:"../src/assets/aws.svg" }
+        { id:"github", imagen:"./github.svg" },
+        { id:"postgresql", imagen:"./oistgresql.svg" },
+        { id:"docker", imagen:"./docker.svg" },
+        { id:"aws", imagen:"./aws.svg" }
     ]
 
 </script>

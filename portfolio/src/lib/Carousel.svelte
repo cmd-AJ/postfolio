@@ -4,24 +4,24 @@
 	import Carousel from "svelte-carousel";
 	const images = [
 	  {
-		url: '../src/assets/carblogs.mp4',
-		description: "../src/assets/react.svg",
+		url: './carblogs.mp4',
+		description: "./react.svg",
 	  },
 	  {
-		url: "../src/assets/chat.mp4",
-		description: "../src/assets/javascript.svg",
+		url: "./chat.mp4",
+		description: "./javascript.svg",
 	  },
 	  {
-		url: "../src/assets/Ionic.mp4",
-		description: "../src/assets/ionic.svg",
+		url: "./Ionic.mp4",
+		description: "./ionic.svg",
 	  },
 	  {
-		url: "../src/assets/html.mp4",
-		description: "../src/assets/html5.svg",
+		url: "./html.mp4",
+		description: "./html5.svg",
 	  },
 	  {
-		url: "../src/assets/goku.mp4",
-		description: "../../css3.svg",
+		url: "./goku.mp4",
+		description: "./css3.svg",
 	  },
 	];
 	let carousel; // for calling methods of the carousel instance

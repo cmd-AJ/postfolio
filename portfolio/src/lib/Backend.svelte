@@ -1,10 +1,10 @@
 <script>
 
     const tecnologias = [
-        { id:"python", imagen:"/python.svg" },
-        { id:"java", imagen:"/java.svg" },
-        { id:"javascript", imagen:"/javascript.svg" },
-        { id:"C++", imagen:"/cplus.svg" }
+        { id:"python", imagen:"../src/assets/python.svg" },
+        { id:"java", imagen:"../src/assets/java.svg" },
+        { id:"javascript", imagen:"../src/assets/javascript.svg" },
+        { id:"C++", imagen:"../src/assets/cplus.svg" }
     ]
 
 </script>

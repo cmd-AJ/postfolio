@@ -11,7 +11,6 @@
      {carpeta:'backend', url:"/Invitados: ~$ cd backend"},
      {carpeta:'tools', url:"/Invitados: ~$ cd tools"}
       ]
-
     function cambiarroute(dir){
         dirs = dir
     }

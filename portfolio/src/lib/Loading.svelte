@@ -47,7 +47,7 @@
     <div class="project01"  style="background-image: url({screens[2]});" >
     </div>
     <div class="text1">
-        <p><strong style="font-size: 3vh;">Andre Jo</strong>, passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. My expertise includes backend technologies like Python, Java, and Node.js, as well as frontend technologies such as HTML, CSS, and JavaScript. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
+        <p><strong style="font-size: 3vh;">Andre Jo</strong>, passionate programmer currently studying at the Universidad del Valle de Guatemala. I specialize in seamlessly connecting frontend and backend technologies to create dynamic web applications. I advocate for the synergy between frontend and backend development, where seamless integration enhances a digital product's functionality and aesthetics. I'm driven by a constant thirst for knowledge, always seeking to expand my skill set and deepen my understanding of software development. </p>
         <button class="buttons" id="buttons" on:click={handleclick}><a href="#tecno" on:click|preventDefault={handleclick}>Get Started</a></button>
         <div class="foto" style="background-image: url('./yo.png');"></div>
     </div>
@@ -131,6 +131,7 @@
         border: 2px solid #CCC9DC;
         border-radius: 20px;
         padding: 2%;
+        font-size: large;
 
 
     }
@@ -159,6 +160,7 @@
         border-top: 5px solid white;
         border-right: 5px solid white;
         padding-top: 1%;
+        font-size: 3vh;
     }
 
     
